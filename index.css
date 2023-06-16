@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(circle, #051937, #0b1a42, #171a4c, #271854, #38125a);
+  overflow: hidden;
+}
+
+* {
+  font-family: "Fredoka";
+}
+
+canvas#gl, canvas#gl2 {
+  position: absolute;
+}
+
+#chosen {
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: rgba(242, 242, 242, 0.2);
+  backdrop-filter: blur(5px);
+  border-right: 5px solid white;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  flex-direction: column;
+}
+#chosen::-webkit-scrollbar {
+  display: none;
+}
+#chosen > div {
+  min-height: 120px;
+  height: 120px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+#chosen > div > * {
+  position: absolute;
+  font-size: 4rem;
+  text-shadow: 0 0 10px black;
+}
+
+#rahmen {
+  position: absolute;
+  width: 610px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: black;
+  box-shadow: -1px 1px 30px 10px white inset;
+}
+
+#wheel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  transition: transform 2s ease-in-out;
+}
+
+button {
+  font-size: 1.75rem;
+  all: unset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 5rem;
+  aspect-ratio: 1/1;
+  border: 1px solid white;
+}
+button::after {
+  z-index: 1;
+  position: absolute;
+  top: -1.9rem;
+  content: "";
+  width: 1.5rem;
+  height: 2rem;
+  clip-path: polygon(50% 0%, 10% 100%, 90% 100%);
+  background-color: black;
+}
+button::before {
+  position: absolute;
+  top: -2.1rem;
+  content: "";
+  width: 1.6rem;
+  height: 2.1rem;
+  clip-path: polygon(50% 0%, 10% 100%, 90% 100%);
+  background-color: white;
+}
+
+/*# sourceMappingURL=index.css.map */
